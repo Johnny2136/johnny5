@@ -11,7 +11,8 @@ default: &default
 
 development:
   <<: *default
-  database: /opt/app-root/data/development.sqlite3
+  database: <%= ENV['HOME'] %>/shared/db/production.sqlite3
+#  database: /opt/app-root/data/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
